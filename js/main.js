@@ -37,12 +37,29 @@ function initReveal() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
-      entry.target.querySelectorAll('.reveal').forEach((el) => el.classList.add('in'));
+      entry.target.querySelectorAll('.reveal').forEach((el, i) => {
+        el.style.setProperty('--reveal-delay', `${Math.min(i * 70, 280)}ms`);
+        el.classList.add('in');
+      });
       observer.unobserve(entry.target);
     });
-  }, { threshold: 0.15 });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
 
   sections.forEach((section) => observer.observe(section));
+}
+
+/* ---------- Nav-Schatten beim Scrollen ---------- */
+
+function initNavScroll() {
+  const nav = document.querySelector('.nav');
+  if (!nav) return;
+
+  const sync = () => {
+    nav.classList.toggle('is-scrolled', window.scrollY > 12);
+  };
+
+  sync();
+  window.addEventListener('scroll', sync, { passive: true });
 }
 
 /* ---------- Terminal im Hero „tippt“ sich selbst ---------- */
@@ -136,6 +153,7 @@ function initYear() {
 
 initThemeToggle();
 initReveal();
+initNavScroll();
 initTerminal();
 initNavSpy();
 initCopyDiscord();
