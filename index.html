@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lukman – IT-Portfolio</title>
+  <meta name="description" content="Lukman, 18, aus NRW – Fachinformatiker für Systemintegration in Ausbildung. Netzwerke, Telefonanlagen, Server und IT-Infrastruktur.">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Setzt das Farbschema vor dem ersten Rendern (verhindert Aufblitzen) -->
+  <script src="js/theme.js"></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/kontakt.js" defer></script>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="#hero" class="nav__logo">lukman<span class="accent">.</span></a>
+    <div class="nav__links">
+      <a href="#ueber-mich" data-nav>Über mich</a>
+      <a href="#themen" data-nav class="nav-hide-mobile">Themen</a>
+      <a href="#projekte" data-nav>Projekte</a>
+      <a href="#werdegang" data-nav class="nav-hide-mobile">Werdegang</a>
+      <a href="#kontakt" data-nav>Kontakt</a>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Farbmodus wechseln">
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8L6 18M18 6l1.8-1.8"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero -->
+    <section id="hero" class="hero">
+      <div class="hero__inner">
+        <div class="hero__text">
+          <div class="eyebrow eyebrow--lg">// Hallo, ich bin Lukman</div>
+          <h1 class="hero__title">IT muss laufen.<br><span class="hero__title-accent">Ich sorge dafür.</span></h1>
+          <p class="hero__lead">Fachinformatiker für Systemintegration <span class="nowrap">in Ausbildung</span> – Netzwerke, Telefonanlagen, Server und alles, was dazwischen hängt.</p>
+          <div class="hero__actions">
+            <a href="#projekte" class="btn btn--primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+              Projekte ansehen
+            </a>
+            <a href="#kontakt" class="btn btn--ghost">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              Kontakt aufnehmen
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="hero__avatar">
+            <img src="assets/img/lukman-pixelart.png" alt="Pixel-Art-Porträt von Lukman" width="828" height="956">
+          </div>
+          <div class="terminal" aria-label="Terminal mit Kurzinfos zu Lukman">
+            <div class="terminal__bar">
+              <span class="terminal__dot terminal__dot--red"></span>
+              <span class="terminal__dot terminal__dot--yellow"></span>
+              <span class="terminal__dot terminal__dot--green"></span>
+              <span class="terminal__title">lukman@nrw: ~</span>
+            </div>
+            <div class="terminal__body" id="terminal">
+              <p class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">whoami</span></p>
+              <p class="t-out">lukman</p>
+              <p class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">cat ausbildung.txt</span></p>
+              <p class="t-out">Fachinformatiker für Systemintegration</p>
+              <p class="t-out t-muted">2. Lehrjahr · Abschluss vsl. Sommer 2028</p>
+              <p class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">systemctl status it</span></p>
+              <p class="t-out"><span class="t-ok">●</span> active <span class="t-ok">(running)</span></p>
+              <p class="t-line"><span class="t-prompt">$</span> <span class="t-cursor" aria-hidden="true"></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 · Über mich -->
+    <section id="ueber-mich" class="section">
+      <div class="reveal">
+        <div class="eyebrow">01 · Über mich</div>
+        <h2 class="section__title section__title--tight">Azubi, Bastler, Infrastruktur-Fan</h2>
+        <p class="section__intro">18, aus NRW – und seit August 2025 in der Ausbildung zum Fachinformatiker für Systemintegration.</p>
+      </div>
+
+      <div class="about">
+        <!-- Profilkarte -->
+        <article class="panel profile reveal">
+          <div class="profile__head">
+            <div class="profile__photo">
+              <img src="assets/img/profil.webp" alt="Foto von Lukman" width="378" height="252">
+            </div>
+            <div>
+              <h3 class="profile__name">Lukman</h3>
+              <ul class="profile__facts">
+                <li>18 Jahre</li>
+                <li>NRW</li>
+                <li>FiSi-Azubi</li>
+              </ul>
+            </div>
+          </div>
+          <p class="profile__text">Hey! Ich bastel super gerne an Netzwerken, Servern und allem, was mit IT-Infrastruktur zu tun hat – zu Hause genauso wie in der Ausbildung.</p>
+          <p class="profile__text">Angefangen hat das Ganze damit, dass ich einfach ausprobiert habe, wie Rechner und Netzwerke zusammenspielen. Daraus ist über die Zeit ein richtiges Hobby geworden.</p>
+        </article>
+
+        <!-- Kurz & bündig -->
+        <article class="panel panel--center reveal">
+          <h3 class="panel__title">Kurz &amp; bündig</h3>
+          <p class="panel__text">Mein Fokus liegt auf Netzwerktechnik, Telefonanlagen und Serveradministration – in der Ausbildung und privat bei eigenen kleinen Projekten. Ich probiere gerne Neues aus und lerne am liebsten, indem ich Sachen selbst aufsetze.</p>
+          <ul class="tags">
+            <li class="tag tag--blue">Netzwerktechnik</li>
+            <li class="tag tag--orange">VoIP / 3CX</li>
+            <li class="tag tag--violet">Serveradministration</li>
+            <li class="tag tag--green">IT-Infrastruktur</li>
+          </ul>
+          <a href="#projekte" class="btn btn--primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            Zu den Projekten
+          </a>
+        </article>
+
+        <!-- Skills -->
+        <article class="panel skills reveal">
+          <h3 class="panel__title">Meine Skills</h3>
+
+          <div class="skills__group skills__group--blue">
+            <div class="skills__label">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="7" rx="2"/><rect x="3" y="14" width="18" height="7" rx="2"/><path d="M7 6.5h.01M7 17.5h.01"/></svg>
+              Server &amp; Dienste
+            </div>
+            <ul class="chips">
+              <li class="chip">Windows Server</li>
+              <li class="chip">Active Directory</li>
+              <li class="chip">DNS</li>
+              <li class="chip">DHCP</li>
+              <li class="chip">Exchange</li>
+              <li class="chip">Fileserver</li>
+              <li class="chip">IIS</li>
+              <li class="chip">Terminalserver (RDS)</li>
+            </ul>
+          </div>
+
+          <div class="skills__group skills__group--violet">
+            <div class="skills__label">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2 2 7l10 5 10-5z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></svg>
+              Virtualisierung
+            </div>
+            <ul class="chips">
+              <li class="chip">Hyper-V</li>
+              <li class="chip">VMware</li>
+              <li class="chip">Proxmox</li>
+            </ul>
+          </div>
+
+          <div class="skills__group skills__group--green">
+            <div class="skills__label">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="2" width="6" height="5" rx="1"/><rect x="2" y="17" width="6" height="5" rx="1"/><rect x="16" y="17" width="6" height="5" rx="1"/><path d="M12 7v5M5 17v-3h14v3"/></svg>
+              Netzwerk
+            </div>
+            <ul class="chips">
+              <li class="chip">VLANs</li>
+              <li class="chip">Routing</li>
+              <li class="chip">Switching</li>
+              <li class="chip">Cisco</li>
+              <li class="chip">UniFi</li>
+            </ul>
+          </div>
+
+          <div class="skills__group skills__group--orange">
+            <div class="skills__label">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Telefonie
+            </div>
+            <ul class="chips">
+              <li class="chip">3CX</li>
+              <li class="chip">VoIP</li>
+            </ul>
+          </div>
+
+          <div class="skills__group skills__group--slate">
+            <div class="skills__label">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m4 17 6-6-6-6M12 19h8"/></svg>
+              System &amp; Skripting
+            </div>
+            <ul class="chips">
+              <li class="chip">Linux</li>
+              <li class="chip">PowerShell</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 02 · Themen -->
+    <section id="themen" class="section">
+      <div class="reveal">
+        <div class="eyebrow">02 · Was mich beschäftigt</div>
+        <h2 class="section__title section__title--spaced">Themen, mit denen ich mich gerne beschäftige</h2>
+      </div>
+      <div class="grid grid--themen">
+        <article class="card reveal">
+          <div class="card__icon"><span class="shape shape--square"></span></div>
+          <h3 class="card__title">Netzwerktechnik</h3>
+          <p class="card__text">Switching, Routing, VLANs – wie Geräte miteinander sprechen und wie man das sauber aufbaut.</p>
+        </article>
+        <article class="card reveal">
+          <div class="card__icon"><span class="shape shape--circle"></span></div>
+          <h3 class="card__title">Telefonanlagen (VoIP)</h3>
+          <p class="card__text">Von klassischer Telefonie zu IP-basierten Systemen wie 3CX – Aufbau, Konfiguration, Troubleshooting.</p>
+        </article>
+        <article class="card reveal">
+          <div class="card__icon"><span class="shape shape--sharp"></span></div>
+          <h3 class="card__title">Serveradministration</h3>
+          <p class="card__text">Serverdienste einrichten, verwalten und am Laufen halten – lokal wie virtualisiert.</p>
+        </article>
+        <article class="card reveal">
+          <div class="card__icon"><span class="shape shape--leaf"></span></div>
+          <h3 class="card__title">IT-Infrastruktur</h3>
+          <p class="card__text">Alles, was Systeme im Hintergrund zusammenhält – Hardware, Netzwerke, Dienste.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 03 · Projekte -->
+    <section id="projekte" class="section">
+      <div class="reveal">
+        <div class="eyebrow">03 · Projekte</div>
+        <h2 class="section__title section__title--tight">Projekte</h2>
+        <p class="section__intro">Hier stelle ich nach und nach Sachen vor, an denen ich gebastelt habe.</p>
+      </div>
+      <div class="grid grid--projekte">
+        <article class="card card--project reveal">
+          <div class="card__label">Projekt 1 · Ausbildung</div>
+          <h3 class="card__title">On-Premises Umgebung</h3>
+          <p class="card__text">Eine komplette On-Premises-Umgebung aufgesetzt – von Planung bis Dokumentation und Übergabe an den Kunden.</p>
+          <ul class="chips chips--sm">
+            <li class="chip">Active Directory</li>
+            <li class="chip">DNS</li>
+            <li class="chip">DHCP</li>
+            <li class="chip">Exchange</li>
+            <li class="chip">Fileserver</li>
+            <li class="chip">Webserver</li>
+            <li class="chip">Terminalserver</li>
+            <li class="chip">Backupserver</li>
+          </ul>
+        </article>
+        <article class="card card--project reveal">
+          <div class="card__label">Projekt 2</div>
+          <h3 class="card__title">IP-Telefonanlage in der Cloud</h3>
+          <p class="card__text">Eine cloudbasierte IP-Telefonanlage mit 3CX aufgesetzt und konfiguriert.</p>
+          <ul class="chips chips--sm">
+            <li class="chip">3CX</li>
+            <li class="chip">VoIP</li>
+            <li class="chip">Cloud</li>
+          </ul>
+        </article>
+        <article class="card card--project reveal">
+          <div class="card__label">Projekt 3 · Privat</div>
+          <h3 class="card__title">Gameserver-Hosting</h3>
+          <p class="card__text">Mehrere Gameserver aufgesetzt und konfiguriert, unter anderem auch Mods für die Games konfiguriert und angepasst.</p>
+          <ul class="chips chips--sm">
+            <li class="chip">Gameserver</li>
+            <li class="chip">Mods</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- 04 · Werdegang -->
+    <section id="werdegang" class="section">
+      <div class="reveal">
+        <div class="eyebrow">04 · Werdegang</div>
+        <h2 class="section__title section__title--timeline">Mein Weg bisher</h2>
+      </div>
+      <ol class="timeline">
+        <li class="timeline__item reveal">
+          <div class="timeline__marker"><span class="timeline__dot"></span><span class="timeline__line"></span></div>
+          <div class="timeline__content">
+            <div class="timeline__date">bis 2025</div>
+            <h3 class="card__title">Realschule</h3>
+            <p class="card__text">Schulabschluss gemacht.</p>
+          </div>
+        </li>
+        <li class="timeline__item reveal">
+          <div class="timeline__marker"><span class="timeline__dot timeline__dot--filled"></span><span class="timeline__line"></span></div>
+          <div class="timeline__content">
+            <div class="timeline__date">seit 01.08.2025</div>
+            <h3 class="card__title">Ausbildungsbeginn</h3>
+            <p class="card__text">Start der Ausbildung zum Fachinformatiker für Systemintegration bei group24 AG in 48653 Gescher.</p>
+          </div>
+        </li>
+        <li class="timeline__item reveal">
+          <div class="timeline__marker"><span class="timeline__dot timeline__dot--filled timeline__dot--pulse"></span><span class="timeline__line timeline__line--dashed"></span></div>
+          <div class="timeline__content">
+            <div class="timeline__date">heute</div>
+            <h3 class="card__title">2. Lehrjahr</h3>
+            <p class="card__text">Mittendrin in der Ausbildung.</p>
+          </div>
+        </li>
+        <li class="timeline__item timeline__item--future reveal">
+          <div class="timeline__marker"><span class="timeline__dot timeline__dot--future"></span></div>
+          <div class="timeline__content">
+            <div class="timeline__date">Sommer 2028 (geplant)</div>
+            <h3 class="card__title">Abschluss</h3>
+            <p class="card__text">Abschlussprüfung zum Fachinformatiker für Systemintegration.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- 05 · Kontakt -->
+    <section id="kontakt" class="section section--last">
+      <div class="reveal contact">
+        <div class="eyebrow">05 · Kontakt</div>
+        <h2 class="section__title section__title--contact">Kontakt</h2>
+        <p class="section__intro section__intro--contact">Schreib mir einfach über das Formular – ich melde mich so schnell wie möglich.</p>
+
+        <!-- ===== Kontaktformular ===== -->
+        <form class="panel contact-form" id="contact-form" action="mailto:kontakt@lukmanhussein.de" method="post" novalidate>
+          <div class="form-row">
+            <label class="form-field">
+              <span class="form-label">Name</span>
+              <input class="form-input" type="text" name="name" autocomplete="name" required minlength="2" maxlength="100">
+            </label>
+            <label class="form-field">
+              <span class="form-label">E-Mail</span>
+              <input class="form-input" type="email" name="email" autocomplete="email" required maxlength="200">
+            </label>
+          </div>
+
+          <label class="form-field">
+            <span class="form-label">Nachricht</span>
+            <textarea class="form-input form-textarea" name="nachricht" rows="5" required minlength="10" maxlength="5000"></textarea>
+          </label>
+
+          <!-- Honeypot: für Menschen unsichtbar, Bots füllen es aus -->
+          <div class="form-hp" aria-hidden="true">
+            <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+          </div>
+
+          <!-- Turnstile entfällt in der statischen GitHub-Pages-Spiegelung -->
+          <div class="form-turnstile" id="turnstile" hidden></div>
+
+          <p class="form-note">
+            Mit dem Absenden werden deine Angaben zur Bearbeitung deiner Anfrage verarbeitet.
+            Mehr dazu in der <a href="datenschutz.html">Datenschutzerklärung</a>.
+          </p>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn--primary" id="contact-submit">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+              Nachricht senden
+            </button>
+            <p class="form-status" id="contact-status" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+
+        <p class="contact__or">Oder direkt über:</p>
+        
+        <div class="contact__list">
+          <a class="contact__item" href="https://www.linkedin.com/in/hussein-lukman/" target="_blank" rel="noopener">
+            <div class="contact__icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><line x1="7" y1="10" x2="7" y2="17"/><circle cx="7" cy="6.5" r="0.5" fill="currentColor"/><path d="M11 17v-4.5a2.5 2.5 0 0 1 5 0V17"/><line x1="11" y1="10" x2="11" y2="17"/></svg>
+            </div>
+            <div class="contact__body">
+              <div class="contact__name">LinkedIn</div>
+              <div class="contact__handle">Profil ansehen</div>
+            </div>
+          </a>
+
+          <a class="contact__item" href="https://www.instagram.com/_lukman.47" target="_blank" rel="noopener">
+            <div class="contact__icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+            </div>
+            <div class="contact__body">
+              <div class="contact__name">Instagram</div>
+              <div class="contact__handle">@_lukman.47</div>
+            </div>
+          </a>
+
+          <button type="button" class="contact__item" id="copy-discord" data-copy="darti47">
+            <div class="contact__icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="4"/><circle cx="9" cy="12.5" r="1.4" fill="currentColor"/><circle cx="15" cy="12.5" r="1.4" fill="currentColor"/><path d="M8 6l1-2h6l1 2"/></svg>
+            </div>
+            <div class="contact__body">
+              <div class="contact__name">Discord</div>
+              <div class="contact__handle">darti47</div>
+            </div>
+            <span class="contact__copy" aria-live="polite">Kopieren</span>
+          </button>
+
+        </div>
+      </div>
+    </section>
+  </main>
+    
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="nav__logo">lukman<span class="accent">.</span></a>
+        <p class="footer__tagline">Fachinformatiker für Systemintegration in Ausbildung.</p>
+      </div>
+
+      <div class="footer__col">
+        <div class="footer__title">Rechtliches</div>
+        <ul class="footer__links footer__links--legal">
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <div class="footer__title">Kontakt</div>
+        <ul class="footer__links">
+          <li>
+            <a href="mailto:kontakt@lukmanhussein.de">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+              kontakt@lukmanhussein.de
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">© <span id="year">2026</span> Lukman Hussein</div>
+  </footer>
+</body>
+</html>
