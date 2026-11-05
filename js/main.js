@@ -38,7 +38,7 @@ function initReveal() {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
       entry.target.querySelectorAll('.reveal').forEach((el, i) => {
-        el.style.setProperty('--reveal-delay', `${Math.min(i * 70, 280)}ms`);
+        el.style.setProperty('--reveal-delay', `${Math.min(i * 40, 160)}ms`);
         el.classList.add('in');
       });
       observer.unobserve(entry.target);
